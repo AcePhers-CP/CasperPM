@@ -24,7 +24,6 @@ public class UserDTO {
     userDTO.setUserID(userEntity.getUserID());
     userDTO.setUserPassword(userEntity.getUserPassword());
     userDTO.setUserEmail(userEntity.getUserEmail());
-
     return userDTO;
-}
+  }
 }

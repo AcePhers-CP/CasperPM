@@ -14,20 +14,18 @@ import repsac.demo.service.UserService;
 @RequiredArgsConstructor
 @Slf4j
 public class UserController {
-    private final UserService userService;
+  private final UserService userService;
 
-    @GetMapping("/user/save")
-    public String saveForm(){
-        return "save";
-    }
+  @GetMapping("/user/save")
+  public String saveForm(){
+    return "save";
+  }
 
-    @PostMapping("/user/save")
-    public String save(@ModelAttribute UserDTO userDTO) {
-        log.info("UserController.save");
-        log.info("userDTO = " + userDTO);
-        userService.save(userDTO);
-
-        return "index";
-    }
-
+  @PostMapping("/user/save")
+  public String save(@ModelAttribute UserDTO userDTO) {
+    log.info("UserController.save");
+    log.info("userDTO = " + userDTO);
+    userService.save(userDTO);
+      return "index";
+  }
 }

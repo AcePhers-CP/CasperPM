@@ -15,6 +15,5 @@ public class UserService {
   public void save(UserDTO userDTO) {
     UserEntity userEntity = UserEntity.toUserEntity(userDTO);
     userRepository.save(userEntity);
-
   }
 }
