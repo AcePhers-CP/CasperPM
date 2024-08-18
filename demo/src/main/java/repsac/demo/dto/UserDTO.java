@@ -11,20 +11,19 @@ import repsac.demo.entity.UserEntity;
 @NoArgsConstructor
 @ToString
 public class UserDTO {
-  private Integer Usernum;
-  private String Name;
-  private String UserID;
-  private String UserPassword;
-  private String UserEmail;
+  private Integer userNum;
+  private String name;
+  private String userID;
+  private String userPassword;
+  private String userEmail;
 
   public static UserDTO toUserDTO(UserEntity userEntity){
     UserDTO userDTO = new UserDTO();
-    userDTO.setUsernum(userEntity.getUsernum());
+    userDTO.setUserNum(userEntity.getUserNum());
     userDTO.setName(userEntity.getName());
     userDTO.setUserID(userEntity.getUserID());
     userDTO.setUserPassword(userEntity.getUserPassword());
     userDTO.setUserEmail(userEntity.getUserEmail());
-
     return userDTO;
   }
 }

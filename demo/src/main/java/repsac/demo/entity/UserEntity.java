@@ -15,31 +15,32 @@ import repsac.demo.dto.UserDTO;
 @Getter
 @Table(name = "User")
 public class UserEntity {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer Usernum;
+  private Integer userNum;
 
   @Column
-  private String Name;
+  private String name;
 
   @Column(unique = true)
-  private String UserID;
+  private String userID;
 
   @Column
-  private String UserPassword;
+  private String userPassword;
 
   @Column(unique = true)
-  private String UserEmail;
+  private String userEmail;
 
   public static UserEntity toUserEntity(UserDTO userDTO){
     UserEntity userEntity = new UserEntity();
-    userEntity.setUsernum(userDTO.getUsernum());
+    userEntity.setUserNum(userDTO.getUserNum());
     userEntity.setName(userDTO.getName());
     userEntity.setUserID(userDTO.getUserID());
     userEntity.setUserPassword(userDTO.getUserPassword());
     userEntity.setUserEmail(userDTO.getUserEmail());
-    
     return userEntity;
-  }
+
+}
 
 }

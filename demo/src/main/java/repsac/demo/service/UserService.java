@@ -11,8 +11,8 @@ import repsac.demo.repository.UserRepository;
 @RequiredArgsConstructor
 public class UserService {
   private final UserRepository userRepository;
-  
-  public void save(UserDTO userDTO){
+
+  public void save(UserDTO userDTO) {
     UserEntity userEntity = UserEntity.toUserEntity(userDTO);
     userRepository.save(userEntity);
   }
