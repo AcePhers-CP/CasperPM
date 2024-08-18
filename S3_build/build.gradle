@@ -1,0 +1,26 @@
+plugins {
+    id 'java' //자바 11버전에서 작성됨
+    id 'org.springframework.boot' version '2.5.0' //자바 17버전 이상일 경우 3.x 버전으로 변경
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'CASPER'
+version = '1.0'
+sourceCompatibility ='11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.projectlombok:lombok'
+}
+
+
+
+test {
+    useJUnitPlatform()
+}
