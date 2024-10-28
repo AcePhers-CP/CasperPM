@@ -1,0 +1,106 @@
+/* 전체 컨테이너 */
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 위에서 아래로 정렬 */
+    align-items: center;
+    height: 100vh; /* 화면 높이 */
+    width: 100%; /* 전체 너비 */
+    overflow: hidden; /* 스크롤바 숨기기 */
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* 자식 요소의 절대 위치를 위한 기준 설정 */
+}
+
+/* 상단의 이미지와 버튼 컨테이너 */
+.up {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black; /* 배경 색상과 투명도 */
+    z-index: 10; /* 위쪽에 위치하게 하기 위해 */
+}
+
+/* 상단의 이미지 스타일 */
+.up img {
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 20px; /* 이미지와 버튼 간격 */
+}
+
+/* 상단 버튼 스타일 */
+.up button {
+    background-color: black;
+    color: yellowgreen;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 스크롤 가능한 컨테이너 */
+.scroll-container {
+    overflow-y: scroll; /* 수직 스크롤 가능 */
+    height: calc(100vh - 70px); /* 전체 화면 높이에서 상단의 요소 높이 제외 */
+    width: 100%;
+    padding: 20px 0; /* 좌우 여백을 20px로 설정 */
+    margin-top: 120px; /* 상단 요소 높이만큼 여백 추가 */
+    box-sizing: border-box; /* padding을 포함한 총 너비 계산 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 항목들을 가운데 정렬 */
+}
+
+/* 스크롤바 숨기기 (웹킷 기반 브라우저용) */
+.scroll-container::-webkit-scrollbar {
+    width: 0; /* 스크롤바 너비를 0으로 설정 */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: transparent; /* 스크롤바 thumb를 투명하게 설정 */
+}
+
+/* 각 프로젝트 항목 */
+.item_l {
+    width: 40%;
+    display: flex;
+    justify-content: space-between; /* 버튼을 양 끝으로 배치 */
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0; /* 항목들 사이의 간격 */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+/* 링크 스타일 */
+.item_p {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* 버튼 스타일 */
+.item_l button {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 버튼 호버 스타일 */
+.item_l button:hover {
+    background-color: black;
+    color: white;
+}
